@@ -1,0 +1,4 @@
+com/kouskefil/clients/notification/NotificationClient.class
+com/kouskefil/clients/fraud/FraudClient.class
+com/kouskefil/clients/fraud/FraudCheckResponse.class
+com/kouskefil/clients/notification/NotificationRequest.class

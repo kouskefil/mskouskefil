@@ -1,0 +1,8 @@
+com/kouskefil/notification/NotificationService.class
+com/kouskefil/notification/Notification$NotificationBuilder.class
+com/kouskefil/notification/rabbitmq/NotificationConsumer.class
+com/kouskefil/notification/NotificationApplication.class
+com/kouskefil/notification/NotificationRepository.class
+com/kouskefil/notification/NotificationConfig.class
+com/kouskefil/notification/Notification.class
+com/kouskefil/notification/NotificationController.class

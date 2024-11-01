@@ -3,11 +3,9 @@ package com.kouskefil.customer;
 import com.kouskefil.amqp.RabbitMQMessageProducer;
 import com.kouskefil.clients.fraud.FraudCheckResponse;
 import com.kouskefil.clients.fraud.FraudClient;
-import com.kouskefil.clients.notification.NotificationClient;
 import com.kouskefil.clients.notification.NotificationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 @RequiredArgsConstructor
