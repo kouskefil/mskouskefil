@@ -42,29 +42,29 @@ services:
       - "15672:15672"
     networks:
       - spring
-  eureka-server:
-    image: kouskefil/eureka-server:latest
-    container_name: eureka-server
-    ports:
-      - "8761:8761"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - spring
-    depends_on:
-      - zipkin
-  apigw:
-    image: kouskefil/apigw:latest
-    container_name: apigw
-    ports:
-      - "8083:8083"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - spring
-    depends_on:
-      - zipkin
-      - eureka-server
+#  eureka-server:
+#    image: kouskefil/eureka-server:latest
+#    container_name: eureka-server
+#    ports:
+#      - "8761:8761"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - spring
+#    depends_on:
+#      - zipkin
+#  apigw:
+#    image: kouskefil/apigw:latest
+#    container_name: apigw
+#    ports:
+#      - "8083:8083"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - spring
+#    depends_on:
+#      - zipkin
+#      - eureka-server
 #   CUSTOMER CONFIG
   customer:
      image: kouskefil/customer:latest
@@ -78,7 +78,6 @@ services:
        - postgres
      depends_on:
        - zipkin
-       - eureka-server
        - rabbitmq
        - postgres
 #   FRAUD CONFIG
@@ -94,7 +93,6 @@ services:
       - spring
     depends_on:
       - zipkin
-      - eureka-server
       - rabbitmq
       - postgres
 # NOTIFICATION CONFIG
@@ -110,7 +108,6 @@ services:
       - postgres
     depends_on:
       - zipkin
-      - eureka-server
       - postgres
       - rabbitmq
 networks:
