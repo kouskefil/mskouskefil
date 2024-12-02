@@ -65,6 +65,8 @@ services:
 #    depends_on:
 #      - zipkin
 #      - eureka-server
+
+
 #   CUSTOMER CONFIG
   customer:
      image: kouskefil/customer:latest

@@ -1,7 +1,4 @@
 package com.kouskefil.notification;
-
-import com.kouskefil.amqp.RabbitMQMessageProducer;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +12,7 @@ import org.springframework.context.annotation.PropertySources;
     }
 )
 @PropertySources({
-        @PropertySource("classpath:clients-${spring.profiles.active}.properties"),
+        @PropertySource("classpath:clients-${spring.profiles.active}.properties")
 })
 public class NotificationApplication {
     public static void main(String[] args) {
